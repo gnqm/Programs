@@ -35,7 +35,7 @@ def crores(num):
     if(num<10000000):
         return lakhs(num)
     else:
-        return (hundreds(num//10000000)+" crore "+lakhs(num%10000000))
+        return (lakhs(num//10000000)+" crore, "+lakhs(num%10000000))
         
 n=input("Enter number: ")
 try:
@@ -47,18 +47,8 @@ try:
 
     if(num==0):
         print("Zero")
-    
-    if(l==1):
-        print(ones(num))
-    elif(l==2):
-        print(tens(num))
-    elif(l==3):
-        print(hundreds(num))
-    elif(l==4 or l==5):
-        print(thousands(num))
-    elif(l==6 or l==7):
-        print(lakhs(num))
-    elif(l>7):
+    else:
         print(crores(num))
+
 except:
-    print("Invalid Input, type a number having maximum 10 digits")
+    print("Invalid Input, type a number having maximum 14 digits")
