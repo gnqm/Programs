@@ -38,8 +38,8 @@ def crores(num):
         return (lakhs(num//10000000)+" crore, "+lakhs(num%10000000))
         
 n=input("Enter number: ")
+
 try:
-    l=len(n.lstrip('0'))
     if(n.lstrip('0')==""):
         num=0
     else:
